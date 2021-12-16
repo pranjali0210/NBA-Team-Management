@@ -1,0 +1,23 @@
+<h4>Hey, Coach here!</h4>
+
+<form method="POST" action="/matchstatspage">
+    {% csrf_token %}
+    <label>Player Stats:</label>
+    <div class="mb-3">
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Player ID" name="player_id">
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Match ID" name="match_id">
+    </div>
+    <button type="submit">Show Stats</button>
+</form>
+
+<br>
+<form method="GET", action='/currentteam'>
+    <button type="submit">View Current Team</button>
+</form>
+
+
+<br>
+    <form action="/schedulepage" method="GET">
+        <button type=submit><h3>Check Full Schedule here!!</h3></button>
+    </form>
+<br>

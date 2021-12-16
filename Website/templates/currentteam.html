@@ -1,0 +1,17 @@
+
+<h4>Current Team: </h4>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for item in obj %}
+    <ul>
+        <li><strong> Name: {{ item.player_name }} </strong> </li> 
+        </li> Player_id: {{ item.player_id }}</li> <br>
+        </li> Team ID: {{ item.team_id }}</li> <br>
+        </li> Year: {{ item.year }}</li> <br>
+    
+    </ul>
+    {% endfor %}
+{% endblock %}

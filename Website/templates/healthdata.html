@@ -1,0 +1,20 @@
+<h4>Health data here</h4>
+
+
+{% block content %}
+<form method="POST" action="/commentadded"></form>
+<ul>
+   <strong> <li>player_name = {{ obj.player_name }} </li> <br>  </strong>    
+    <li>check_up_date = {{ obj.check_up_date }} </li> <br>
+    <li>bp = {{ obj.bp }} </li><br>
+    <li>cholestrol = {{ obj.cholestrol }} </li> <br>
+    <li>bpm = {{ obj.bpm }} </li> <br>
+    <li>oxygen = {{ obj.oxygen }} </li> <br>
+</ul>
+
+    <label>Comments:</label>
+    <input type="text" name="comment">
+    <button type="submit">Add Comment</button>
+</form>
+
+{% endblock %}

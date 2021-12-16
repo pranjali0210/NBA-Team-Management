@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+    <h4>Delete a player Page</h4>
+    <form method="POST", action="/deleteaplayer">
+        {% csrf_token %}
+        <label>Enter Player Id here to delete:</label>
+        <div class="mb-3">
+            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Player ID" name="player_id">
+        </div>
+        <button type="submit">Delete</button>
+    </form>
+
+{% endblock %}

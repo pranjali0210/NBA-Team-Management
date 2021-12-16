@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Manager Page below</h3>
+    <button type="submit"><a href="/addaplayer">Add a Player</a></button>
+    <button type="submit"><a href="/deleteaplayer">Delete a Player</a></button>
+    <form action = '/reviewcontracts' method="POST">
+    {% csrf_token %}
+        <button type="submit">Review Contracts</a></button>
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter Player ID" name="player_id">
+    </form>
+    <br>
+
+    <form action="/expiringcontracts" method="GET">
+        <button type="submit">See expiring contracts</button>
+        
+    </form>
+
+{% endblock %}

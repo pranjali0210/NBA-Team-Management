@@ -1,0 +1,16 @@
+{% block content %}
+
+<label><h4>Upcoming Training Session:</h4></label>
+    {% for item in obj %}
+    <ul>
+        <li><strong> Session Name: {{ item.session_name }} </strong> </li> 
+        </li> Schedule Id: {{ item.schedule_id }}</li> <br>
+        </li> Practice date: {{ item.practice_date }}</li> <br>
+        </li> Practice day: {{ item.practice_day }}</li> <br>
+        </li> Practice time: {{ item.practice_time }}</li> <br>
+        </li> Number of hours: {{ item.no_of_hours }}</li> <br>
+    
+    </ul>
+    {% endfor %}
+
+{% endblock %}

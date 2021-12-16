@@ -1,0 +1,41 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>Hi {{ query1.player_name }}</h3>
+    <form action='/schedulenowpage' method="GET">
+    {% csrf_token %}
+        <label>See Today's Schedule:</label><button type=submit>See</button>
+    </form>
+    <form action="/statspage" method="GET">
+        <label>See Stats:</label><button type=submit>See</button>
+    </form>
+    <br>
+    <h4>Basic Information:</h4>
+    name =  {{ query1.player_name }}<br>
+	player_id = {{ query1.player_id }}<br>
+	date_of_birth = {{ query1.date_of_birth }}<br>
+    age = {{ query1.age }}<br>
+    status = {{ query1.status }}<br>
+	position = {{ query1.pos}}<br>
+	height = {{ query1.height }}<br>
+    weight = {{ query1.weight }}<br>
+    status = {{ query1.status }}<br>
+
+    <br>
+    <form action="/schedulepage" method="GET">
+        <button type=submit><h3>Check Upcoming Training Session here!!</h3></button>
+    </form>
+    <br>
+
+    <form method="get" action="/fouls">
+        <button type="submit">Click here to see your fouls</button>
+    </form>
+
+    <form method="get" action="/matches">
+        <button type="submit">Click here to see your total matches</button>
+    </form>
+
+{% endblock %}

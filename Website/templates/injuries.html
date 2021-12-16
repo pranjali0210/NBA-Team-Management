@@ -1,0 +1,11 @@
+<h4>List of injured people will be shown here</h4>
+
+{% block content %}
+    {% for item in obj %}
+    <ul>
+        <li><strong> Player Name: {{ item.player_name }} </strong> </li> 
+        </li> Player Id: {{ item.player_id }}</li> <br>
+    </ul>
+    {% endfor %}
+
+{% endblock %}

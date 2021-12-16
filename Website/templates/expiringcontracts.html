@@ -1,0 +1,20 @@
+
+<h4>Expiring contracts are viewed here</h4>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for item in obj %}
+    <ul>
+        <li><strong> Name: {{ item.player_name }} </strong> </li> 
+        </li> Player_id: {{ item.player_id }}</li> <br>
+        </li> Free agent year: {{ item.fa_year }}</li> <br>
+        </li> Salary: {{ item.salary }}</li> <br>
+        </li> AAV: {{ item.aav }}</li> <br>
+    
+    </ul>
+    {% endfor %}
+{% endblock %}
+
+</table>

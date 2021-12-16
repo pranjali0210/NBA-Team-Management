@@ -1,0 +1,22 @@
+<h4>Match Stats Details:</h4>
+{% block content %}
+   
+    <ul>
+        <strong>
+        <li> Match ID: {{ obj.match_id }} </li> 
+        </li> Player ID: {{ obj.player_id }}</li> <br>
+        </strong>
+        </li> Offensive_rebound: {{ obj.Offensive_rebound }}</li> <br>
+        </li> Defensive_rebounds: {{ obj.Defensive_rebounds }}</li> <br>
+        </li> rebounds: {{ obj.rebounds }}</li> <br>
+        </li> assists: {{ obj.assists }}</li> <br>
+        </li> steals: {{ obj.steals }}</li> <br>
+        </li> blocked_shots: {{ obj.blocked_shots }}</li> <br>
+        </li> turnovers: {{obj.turnovers }}</li> <br>
+        </li> personal_fouls: {{ obj.personal_fouls }}</li> <br>
+        </li> points_scored: {{ obj.points_scored }}</li> <br>
+    
+    </ul>
+    
+
+{% endblock %}

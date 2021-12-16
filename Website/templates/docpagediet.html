@@ -1,0 +1,9 @@
+<h4>Dietician here!!!</h4>
+
+<form method="POST" action='/healthdata'>
+    {% csrf_token %}
+    <div class="mb-3">
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Player ID" name="player_id">
+    </div>
+    <button type="submit">Click to see player info</button>
+</form>

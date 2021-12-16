@@ -1,0 +1,23 @@
+<h4>Physician here!!!</h4>
+
+<form action="/healthdata" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Player ID" name="">
+    </div>
+    <button type="submit">Click to see player info</button>
+</form>
+
+<form>
+    <label>Comments:</label>
+    <input type="text">
+    <button type="submit">Add Comment</button>
+</form>
+
+
+<form action="/injuries" method="GET">
+    {% csrf_token %}
+    <button type="submit">Click here to view injured patients</button>
+</form>
+
+

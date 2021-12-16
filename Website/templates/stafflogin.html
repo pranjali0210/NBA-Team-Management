@@ -1,0 +1,24 @@
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Staff login here</h3>
+
+    <form action="/supportstaffpage" method="POST">
+       {% csrf_token %} 
+        <div class="mb-3">
+            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Username" name="username">
+        </div>
+        
+        <div class="mb-3">
+            <input type="password" class="form-control" aria-describedby="emailHelp" placeholder="Password" name="passwd">
+        </div>
+
+
+        <button type="submit" class="btn btn-secondary">Sign In</button>
+        <!-- <button type="submit" class="btn btn-secondary" name = 'register'> <a href="/register">Register</a></button> -->
+
+    </form>
+
+{% endblock %}

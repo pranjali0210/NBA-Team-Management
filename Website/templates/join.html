@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>JOIN TODAY!</h1>
+
+
+<form method="GET" action="{% url 'join' %}">
+	{% csrf_token %}
+  <div class="mb-3">
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="ID" name="player_id">
+  </div>
+
+  <div class="mb-3">
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Full Name" name="name">
+  </div>
+
+  <div class="mb-3">
+    <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Team ID" name="team_id">
+  </div>
+
+  <div class="mb-3">
+    <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Season Year" name="season_year">
+  </div>
+
+  <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+
+{% endblock %}

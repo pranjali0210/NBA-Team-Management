@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h3>Welcome to NBA Website</h3></br>
+	<form method="GET" action="/playerlogin">
+		{% csrf_token %}
+	  <div class="mb-3">
+		<button type="submit" class="btn btn-secondary" name="player's Login">Player's Login</button>
+	  </div>
+	</form>
+
+	<form method="GET" action="/admin">
+		{% csrf_token %}
+	  <div class="mb-3">
+		<button type="submit" class="btn btn-secondary" name="admin">Admin</button>
+	  </div>
+	</form>
+
+	<form method="GET" action="/stafflogin">
+		{% csrf_token %}
+	  <div class="mb-3">
+		<button type="submit" class="btn btn-secondary" name="support staff's login">Support Staff's Login</button>
+	  </div>
+	</form>
+		
+		
+		
+		
+	
+
+{% endblock %}
+
+
+
+
+

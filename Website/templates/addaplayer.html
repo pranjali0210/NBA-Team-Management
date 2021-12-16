@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4>Add a Player page </h4>
+
+<form method="POST" action="/addaplayer">
+	{% csrf_token %}
+  <div class="mb-3">
+    <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="ID" name="player_id">
+  </div>
+
+  <div class="mb-3">
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Full Name" name="player_name">
+  </div>
+
+  <div class="mb-3">
+    <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Age" name="age">
+  </div>
+
+  <div class="mb-3">
+    <input type="date" class="form-control" aria-describedby="emailHelp" placeholder="Date of Birth" name="date_of_birth">
+  </div>
+
+  <div class="mb-3">
+    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Position" name="pos">
+  </div>
+
+  <div class="mb-3">
+    <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Height" name="height">
+  </div>
+
+  <div class="mb-3">
+    <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Weight" name="weight">
+  </div>
+
+  <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+
+{% endblock %}
